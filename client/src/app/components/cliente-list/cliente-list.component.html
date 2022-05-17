@@ -1,0 +1,18 @@
+
+<div class="col-md-4" *ngFor="let cliente of clientes">
+    <div class="card text-center" style="width: 18rem">
+        <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+            {{cliente.first_name|uppercase }}
+            <button class="btn btn-danger" (click)="borrarCliente(cliente.id);getClientes()">
+                <i class="far fa-trash-alt" ></i>
+            </button>
+        </div>
+        <div>
+            <img [src]="cliente.image =='' ?'/assets/noimagen.png':cliente.image" class="card-img-top" width="100" height="100">
+        </div>
+        <div class ="card-body">
+            <p>{{cliente.id}}</p>
+            <a [routerLink]="['/clientes/detalle',cliente.id]" class="btn btn-info btn-block">DETALLE</a>
+        </div>
+    </div>
+</div> 

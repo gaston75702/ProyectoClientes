@@ -1,0 +1,32 @@
+
+    <div class="col-md-4 offset-md-4">
+        <div class="card">
+            <div class="card-body">
+                <form >
+                    <div class="form-group">
+                        <input type="text" required name="first_name"  [(ngModel)]="cliente.first_name" placeholder="Nombre:" class="form-control" autofocus>
+
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="last_name" [(ngModel)]="cliente.last_name" placeholder="Apellido:" class="form-control" autofocus >
+                    </div>    
+                    <div class="form-group">
+                        <input type="text" name="email" [(ngModel)]="cliente.email" placeholder="Email:" class="form-control" autofocus >
+                    </div>
+                    <div class="form-group" >
+                        
+                        <select type="text"  name="gender" [(ngModel)]="cliente.gender"  class="form-control" autofocus >
+                            <option >Femenino</option>
+                            <option >Masculino</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="url" name="image" [(ngModel)]="cliente.image" placeholder="Imagen:" class="form-control">
+                    </div>
+                    <button class="btn btn-success btn-block" (click)="saveNewCliente()" >
+                        Guardar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
