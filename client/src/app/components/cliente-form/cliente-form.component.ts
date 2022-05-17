@@ -3,6 +3,8 @@ import { Cliente } from '../../models/Cliente';
 import { ClientesService } from '../../services/clientes.service';
 import {Router} from '@angular/router';
 
+
+
 @Component({
   selector: 'app-cliente-form',
   templateUrl: './cliente-form.component.html',
@@ -31,6 +33,7 @@ export class ClienteFormComponent implements OnInit {
     },
     err=>console.error(err))
 
-  }
+  };
+    
 
 }
